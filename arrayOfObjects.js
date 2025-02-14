@@ -142,7 +142,15 @@ var yearCount={}
 
 allYears.map(y=> y in yearCount ? yearCount[y]+=1 : yearCount[y]=1)
 
-console.log(yearCount);
+
+var yearCountArray=Object.entries(yearCount)
+
+yearCountArray.sort((y1,y2)=>y2[1]-y1[1])
+
+console.log(yearCountArray);
+
+
+
 
 
 // in which genre most number of movies released
@@ -152,7 +160,16 @@ var genreCount={}
 
 allGenres.map(g=>g in genreCount? genreCount[g]+=1:genreCount[g]=1)
 
+// { Drama: 9, Comedy: 4, Thriller: 3, Action: 2, Romance: 3, Crime: 1 }
+
 console.log(genreCount);
+
+var genreCountArray=Object.entries(genreCount)
+
+genreCountArray.sort((g1,g2)=>g2[1]-g1[1])
+
+console.log(genreCountArray);
+
 
 
 
